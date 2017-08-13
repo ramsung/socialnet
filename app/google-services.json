@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1042312746510-e9q1vgghoamagl2h9vhbieupkqjcmoqs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "social.beyonity.socialnet",
+            "certificate_hash": "67f9ad1966a8c88cc85c629a50e16c3ec773e1b5"
+          }
+        },
+        {
           "client_id": "1042312746510-agb14n7j0d73ghl24f8q04kb7md8spcf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
