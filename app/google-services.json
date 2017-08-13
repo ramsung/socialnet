@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1042312746510",
+    "firebase_url": "https://socialnet-94cf9.firebaseio.com",
+    "project_id": "socialnet-94cf9",
+    "storage_bucket": "socialnet-94cf9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042312746510:android:00977531b4558ac7",
+        "android_client_info": {
+          "package_name": "social.beyonity.socialnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042312746510-e9q1vgghoamagl2h9vhbieupkqjcmoqs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "social.beyonity.socialnet",
+            "certificate_hash": "67f9ad1966a8c88cc85c629a50e16c3ec773e1b5"
+          }
+        },
+        {
+          "client_id": "1042312746510-agb14n7j0d73ghl24f8q04kb7md8spcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "social.beyonity.socialnet",
+            "certificate_hash": "2883f4ba40aa4bcc4f5948f20478a02860fa8cf2"
+          }
+        },
+        {
+          "client_id": "1042312746510-lpbv5e4hs6tl3ccqlgdkbmu74r403vjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDEhfxyZY5GJZzzsDBxh_3e8qHWv3pvY4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042312746510-lpbv5e4hs6tl3ccqlgdkbmu74r403vjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
