@@ -55,6 +55,21 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
 		FirebaseApp.initializeApp(getApplicationContext());
 		setupFirebaseAuth();
 
+		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+				.requestIdToken(getString(R.string.default_web_client_id))
+				.requestEmail()
+				.build();
+		mGoogleApiClient = new GoogleApiClient.Builder(this)
+				.enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
+					@Override
+					public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+					}
+				} )
+				.addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+				.build();
+
+
 		initImageLoader();
 		setupBottomNavigationView();
 		setupViewPager();
@@ -127,26 +142,25 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
 
 		mAuth = FirebaseAuth.getInstance();
 
-		mAuth = FirebaseAuth.getInstance();
-		
-		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-				.requestIdToken(getString(R.string.default_web_client_id))
-				.requestEmail()
-				.build();
+		mAuthListener = new FirebaseAuth.AuthStateListener() {
+			@Override
+			public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+				FirebaseUser user = firebaseAuth.getCurrentUser();
 
-		mGoogleApiClient = new GoogleApiClient.Builder(this)
-				.enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
-					@Override
-					public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+				//check if the user is logged in
+				checkCurrentUser(user);
 
-					}
-				} )
-				.addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-				.build();
-		FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-			if(user == null){
-				signIn();
+				if (user != null) {
+					// User is signed in
+					Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+				} else {
+					// User is signed out
+					Log.d(TAG, "onAuthStateChanged:signed_out");
+				}
+				// ...
 			}
+		};
+
 
 
 	}
