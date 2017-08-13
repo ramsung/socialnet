@@ -48,4 +48,7 @@ dependencies {
 
     //firebase storage
     compile 'com.google.firebase:firebase-storage:10.2.6'
+
+    compile 'com.google.android.gms:play-services-auth:10.2.6'
 }
+apply plugin: 'com.google.gms.google-services'
