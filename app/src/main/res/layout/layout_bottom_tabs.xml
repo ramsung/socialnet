@@ -8,20 +8,22 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true">
 
-        <android.support.design.widget.AppBarLayout
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tab"/>
 
-            <android.support.design.widget.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tabsBottom"
-                android:background="@color/white">
-
-
-            </android.support.design.widget.TabLayout>
-
-        </android.support.design.widget.AppBarLayout>
+        <me.majiajie.pagerbottomtabstrip.PageBottomTabLayout
+            android:id="@+id/tab"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_background"
+            />
 
 
     </RelativeLayout>
